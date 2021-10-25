@@ -11,7 +11,6 @@ if(month > 2 && month < 9){
 
 const currentMonth = new Date().getMonth();
 const season = getSeason(props.lat, currentMonth);
-const iconName = season ===
     return (
         <div>
         <h1>Latitude : {props.lat}</h1>
