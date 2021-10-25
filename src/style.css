@@ -1,0 +1,14 @@
+.winter, .summer {
+    margin: 5% auto 0 auto;
+    width: 500px;
+    text-align: center;
+    padding: 100px 0;
+    font-size: 50px;
+    font-weight: 700;
+}
+.summer {
+    background: rgb(255, 200, 112);
+}
+.winter {
+    background: rgb(113, 210, 255);
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css';
 
 const SeasonDisplay =(props) => {
 const getSeason = (lat, month) => {
@@ -12,9 +13,8 @@ if(month > 2 && month < 9){
 const currentMonth = new Date().getMonth();
 const season = getSeason(props.lat, currentMonth);
     return (
-        <div>
-        <h1>Latitude : {props.lat}</h1>
-        <h4>{season}</h4>
+        <div className={season == 'Winter' ? 'winter' : 'summer'}>
+        <h1>{season}</h1>
         </div>
     )
 }
