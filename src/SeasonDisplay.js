@@ -27,8 +27,8 @@ const currentMonth = new Date().getMonth();
 const season = getSeason(props.lat, currentMonth);
 const {text, iconName, clsName} = seasonsConfig[season];
     return (
-        <div className={clsName}>
-        <h1><i className={`icon ${iconName}`}></i> {text} <i className={`icon ${iconName}`}></i></h1>
+        <div className={clsName}><i className={`icon iconOne ${iconName}`}></i>
+        <h1> {text} </h1><i className={`icon icontwo ${iconName}`}></i>
         </div>
     )
 }

@@ -5,10 +5,22 @@
     padding: 100px 0;
     font-size: 50px;
     font-weight: 700;
+    position: relative;
 }
 .summer {
     background: rgb(255, 200, 112);
 }
 .winter {
     background: rgb(113, 210, 255);
+}
+
+.iconOne {
+    position: absolute;
+    left: 30px;
+    top: 30px
+}
+.icontwo {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
 }
