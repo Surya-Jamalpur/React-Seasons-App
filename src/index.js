@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import SeasonDisplay from './SeasonDisplay'
+import Loader from './loader'
 
 
 class App extends React.Component {
@@ -36,10 +37,10 @@ class App extends React.Component {
         }
         if(this.state.errMessage && !this.state.lat) {
         return(
-            <h4>Error : {this.state.errMessage}</h4>
+            <h4>Error : {this.state.errMessage} <Loader /></h4>
         ) 
         }
-        return <h4>Loading..!</h4>
+        return <Loader msg="Please Allow the Location.." />;
     }
 }
 
