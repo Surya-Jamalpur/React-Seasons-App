@@ -29,18 +29,22 @@ class App extends React.Component {
     componentDidUpdate(){
         console.log('componentDidUpdate called..')
     }
-    render(){
+    renderContent(){
         if(!this.state.errMessage && this.state.lat) {
-        return(
-            <SeasonDisplay lat={this.state.lat} long={this.state.long} />
+            return(
+                <SeasonDisplay lat={this.state.lat} long={this.state.long} />
+            ) 
+            }
+            if(this.state.errMessage && !this.state.lat) {
+            return(
+                <h4>Error : {this.state.errMessage} <Loader /></h4>
+            ) 
+            }
+            return <Loader msg="Please Allow the Location.." />;
+    }
+    render(){
+        return(this.renderContent()
         ) 
-        }
-        if(this.state.errMessage && !this.state.lat) {
-        return(
-            <h4>Error : {this.state.errMessage} <Loader /></h4>
-        ) 
-        }
-        return <Loader msg="Please Allow the Location.." />;
     }
 }
 
